@@ -98,7 +98,7 @@ public class CreditCardEntry extends HorizontalScrollView implements
         } else {
             textColor = null;
         }
-        textSize = typedArray.getDimensionPixelSize(R.styleable.CreditCardForm_text_size, 26);
+        textSize = typedArray.getDimensionPixelSize(R.styleable.CreditCardForm_text_size, 20);
         typedArray.recycle();
 
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
