@@ -94,9 +94,9 @@ public class CreditCardEntry extends HorizontalScrollView implements
 
         TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.CreditCardForm, 0, 0);
         if (!typedArray.getBoolean(R.styleable.CreditCardForm_default_text_colors, false)) {
-            textColor = typedArray.getColor(R.styleable.CreditCardForm_text_color, Color.BLACK);
+            textColor = typedArray.getColor(R.styleable.CreditCardForm_text_color, Color.GREEN);
         } else {
-            textColor = null;
+            textColor = typedArray.getColor(R.styleable.CreditCardForm_text_color, Color.RED);
         }
         textSize = typedArray.getDimensionPixelSize(R.styleable.CreditCardForm_text_size, 20);
         typedArray.recycle();
