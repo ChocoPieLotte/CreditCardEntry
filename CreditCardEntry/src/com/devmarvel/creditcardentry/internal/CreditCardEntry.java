@@ -94,11 +94,11 @@ public class CreditCardEntry extends HorizontalScrollView implements
 
         TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.CreditCardForm, 0, 0);
         if (!typedArray.getBoolean(R.styleable.CreditCardForm_default_text_colors, false)) {
-            textColor = typedArray.getColor(R.styleable.CreditCardForm_text_color, Color.GREEN);
+            textColor = typedArray.getColor(R.styleable.CreditCardForm_text_color, Color.BLACK);
         } else {
-            textColor = typedArray.getColor(R.styleable.CreditCardForm_text_color, Color.RED);
+            textColor = null;
         }
-        textSize = typedArray.getDimensionPixelSize(R.styleable.CreditCardForm_text_size, 20);
+        textSize = typedArray.getDimensionPixelSize(R.styleable.CreditCardForm_text_size, 18);
         typedArray.recycle();
 
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -220,7 +220,7 @@ public class CreditCardEntry extends HorizontalScrollView implements
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-        int shiftPadding = r - l - cardImage.getWidth() - expDateText.getWidth() - securityCodeText.getWidth() - 20;
+        int shiftPadding = r - l - cardImage.getWidth() - expDateText.getWidth() - securityCodeText.getWidth() - 25;
         if (shiftPadding > 0) {
             textFourDigits.setPadding(0, 0, shiftPadding, 0);
         }
